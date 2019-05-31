@@ -1,0 +1,7 @@
+.pyc
+.sqlite3g
+db.sqlite3
+/banner_env/
+/media_here/
+/.idea/
+**.DS_Store**

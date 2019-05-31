@@ -49,7 +49,7 @@ def get(request):
 			place = request.POST['place']
 		##добавить место по умолчанию, квадратный баннер например 250х250 пикселей
 
-		##--- ip ---#
+		## --- ip ---#
 		if 'u_cookie_banner_system' in request.COOKIES:##Проверяем есть ли cookie у пользователя
 			cuid = request.COOKIES.get('u_cookie_banner_system')
 			try:
@@ -154,7 +154,7 @@ def getme(request):
 	if request.method == 'GET':
 		if 'i' in request.GET:
 			try:
-				sh = Activity.objects.filter(url_hash=request.GET['i'])#используем фильтр, если есть несколько одинаковых ссылок чтобы не было косяков
+				sh = Activity.objects.filter(url_hash=request.GET['i']) #используем фильтр, если есть несколько одинаковых ссылок чтобы не было косяков
 				show = sh[0]#если попалась два банера на одной страници у них одинаковые ссылки чтобы не было косяка
 			except:
 				return HttpResponseRedirect('http://ya.ru')
